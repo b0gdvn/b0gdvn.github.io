@@ -1,301 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bootstrap portfolio</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Bohdan Pynchenkov · Portfolio</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-	<link rel="stylesheet" href="style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-<body>
-	<nav class="navbar fixed-top navbar-expand-md navbar-dark" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="#">Bohdan Pynchenkov</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#scrollspyHeading1">O MNIE</a></li>
-            <li class="nav-item"><a class="nav-link" href="#scrollspyHeading2">PRACE</a></li>
-            <li class="nav-item"><a class="nav-link" href="#scrollspyHeading3">USŁUGI</a></li>
-            <li class="nav-item"><a class="nav-link" href="#scrollspyHeading4">KONTAKT</a></li>
-          </ul>
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">Bohdan Pynchenkov</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading1">O MNIE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading2">PRACE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading3">USŁUGI</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading4">KONTAKT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="1.jpg" class="carousel-img">   
+      </div>
+      <div class="carousel-item">
+        <img src="2.jpg" class="carousel-img">
+      </div>
+      <div class="carousel-item">
+        <img src="3.jpg" class="carousel-img">
+      </div>
+    </div>
+  </div>
+
+  <div id="container-about" class="container-fluid col-xxl-12 px-0 mx-0 py-5">
+    <a id="scrollspyHeading1" class="scrollitem"></a>
+    <div class="row flex-lg-row-reverse px-0 mx-0 pb-5 justify-content-center text-right">
+      <div class="col-10 col-sm-8 col-lg-3 ml-5 mr-5 mb-5 m-lg-0">
+        <img src="me.jpg" id="my-ph" class="d-block shadow-lg rounded-me mx-lg-auto img-fluid" style="min-height: 500px; object-fit: cover;" alt="Bootstrap Themes">
+      </div>
+
+      <div class="col-lg-8 d-flex align-content-between flex-wrap px-0">
+        <div id="witam" class="bigtext mt-0" style="text-align: left;">
+          Witam!
+        </div>
+        <div id="witam-cont" style="padding-left: 6rem; padding-right: 1rem;">
+          <h1 class="display-6 fw-bold lh-1 mb-3" style="text-align: right; ">Robienie zdjęć jest moją największą pasją, a to portfolio jest wynikiem wielu lat nauki</h1>
+          <p class="lead" style="text-align: right;">Mówiąc więcej o mnie - jestem studentem informatyki, podróżnikiem i byłym koszykarzem. Obecnie mieszkam w Gdańsku, ale uwielbiam zwiedzanie Polski i całego świata. Lubię fotografować szybkie, dynamiczne akcje na parkiecie i poza nim, fotografię krajobrazowe i portrety bardziej statyczne również są dużą częścią mojej kolekcji.</p>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
 
-	<div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
-      <div class="content text-center">
-        <div class="text-white">B0gdvn</div>
+  <div class="midtext mt-0 text-center">
+    Jakie zdjęcia robię?
+  </div>
+
+  <div class="container-fluid px-4 py-5" id="custom-cards">
+
+    <div class="row row-cols-1 row-cols-lg-3 p-0 mb-5 justify-content-around">
+
+      <div class="rowh col-10 col-sm-8 col-lg-3 mb-5 p-1 m-lg-0">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc1.jpg'); background-size: cover; min-height: 500px;">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1" style="justify-content: flex-end; text-align: center;">
+            <h2 class="display-7 lh-1 fw-bold">Portret</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="rowh col-10 col-sm-8 col-lg-3 mb-5 p-1 m-lg-0">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc2.jpg'); background-size: cover; min-height: 500px;">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1" style="justify-content: flex-end; text-align: center;">
+            <h2 class="display-7 lh-1 fw-bold">Impreza</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="rowh col-10 col-sm-8 col-lg-3 mb-5 p-1 m-lg-0">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc3.jpg'); background-size: cover; min-height: 500px;">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1" style="justify-content: flex-end; text-align: center;">
+            <h2 class="display-7 lh-1 fw-bold">Sport</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row row-cols-1 row-cols-lg-3 p-0 justify-content-around">
+
+      <div class="rowh col-10 col-sm-8 col-lg-3 mb-5 p-1 m-lg-0">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc4.jpg'); background-size: cover; min-height: 500px;">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1" style="justify-content: flex-end; text-align: center;">
+            <h2 class="display-7 lh-1 fw-bold">Krajobraz</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="rowh col-10 col-sm-8 col-lg-3 mb-5 p-1 m-lg-0">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc5.jpg'); background-size: cover; min-height: 500px;">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1" style="justify-content: flex-end; text-align: center;">
+            <h2 class="display-7 lh-1 fw-bold">Architektura</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="rowh col-10 col-sm-8 col-lg-3 mb-5 p-1 m-lg-0">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc6.jpg'); background-size: cover; min-height: 500px;">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1" style="justify-content: flex-end; text-align: center;">
+            <h2 class="display-7 lh-1 fw-bold">Produkt</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bigtext">
+    <a id="scrollspyHeading2" class="scrollitem"></a>
+    Najnowsze <span>prace</span>
+  </div>
+  <div class="container marketing">
+
+    <div class="row h-100">
+      
+    </div><!-- /.row -->
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
       </div>
     </div>
 
-	<div class="main-text">
-	  	<h4 id="scrollspyHeading1">First heading</h4>
-	  	<p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-        </p>
-	  	<h4 id="scrollspyHeading2">Second heading</h4>
-	  	<p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-        </p>
-	  	<h4 id="scrollspyHeading3">Third heading</h4>
-	  	<p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-        </p>
-	  	<h4 id="scrollspyHeading4">Fourth heading</h4>
-	  	<p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-          natus iusto fugit id saepe neque rerum magni laudantium accusantium
-          dolorem numquam quasi.
-        </p>
-	</div>
-	{<script type="text/javascript">
-        window.addEventListener('DOMContentLoaded', event => {
-            // Navbar shrink function
-            var navbarShrink = function () {
-                const navbarCollapsible = document.body.querySelector('#mainNav');
-                if (!navbarCollapsible) {
-                    return;
-                }
-                if (window.scrollY === 0) {
-                    navbarCollapsible.classList.remove('navbar-shrink')
-                } else {
-                    navbarCollapsible.classList.add('navbar-shrink')
-                }
-            };
-            // Shrink the navbar 
-            navbarShrink();
-            // Shrink the navbar when page is scrolled
-            document.addEventListener('scroll', navbarShrink);
-            // Activate Bootstrap scrollspy on the main nav element
-            const mainNav = document.body.querySelector('#mainNav');
-            if (mainNav) {
-                new bootstrap.ScrollSpy(document.body, {
-                    target: '#mainNav',
-                    offset: 50,
-                });
-            };
-            // Collapse responsive navbar when toggler is visible
-            const navbarToggler = document.body.querySelector('.navbar-toggler');
-            const responsiveNavItems = [].slice.call(
-                document.querySelectorAll('#navbarResponsive .nav-link')
-            );
-            responsiveNavItems.map(function (responsiveNavItem) {
-                responsiveNavItem.addEventListener('click', () => {
-                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                        navbarToggler.click();
-                    }
-                });
-            });
-        });
-    </script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2022 Bohdan Pynchenkov</p>
+  </footer>
+</main>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+      window.addEventListener('DOMContentLoaded', event => {
+          // Navbar shrink function
+          var navbarShrink = function () {
+              const navbarCollapsible = document.body.querySelector('#mainNav');
+              if (!navbarCollapsible) {
+                  return;
+              }
+              if (window.scrollY < 400) {
+                  navbarCollapsible.classList.remove('navbar-shrink')
+              } else {
+                  navbarCollapsible.classList.add('navbar-shrink')
+              }
+          };
+          // Shrink the navbar 
+          navbarShrink();
+          // Shrink the navbar when page is scrolled
+          document.addEventListener('scroll', navbarShrink);
+          // Activate Bootstrap scrollspy on the main nav element
+          const mainNav = document.body.querySelector('#mainNav');
+          if (mainNav) {
+              new bootstrap.ScrollSpy(document.body, {
+                  target: '#mainNav',
+                  offset: 50,
+              });
+          };
+          // Collapse responsive navbar when toggler is visible
+          const navbarToggler = document.body.querySelector('.navbar-toggler');
+          const responsiveNavItems = [].slice.call(
+              document.querySelectorAll('#navbarResponsive .nav-link')
+          );
+          responsiveNavItems.map(function (responsiveNavItem) {
+              responsiveNavItem.addEventListener('click', () => {
+                  if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                      navbarToggler.click();
+                  }
+              });
+          });
+      });
+
+  </script>
 </body>
+
 </html>
