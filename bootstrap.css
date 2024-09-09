@@ -484,7 +484,7 @@ progress {
 
 .lead {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .display-1 {
@@ -7936,6 +7936,7 @@ textarea.form-control-lg {
 
 .rounded-me {
   border-radius: 2rem !important;
+  overflow: hidden;
 }
 
 .rounded-circle {

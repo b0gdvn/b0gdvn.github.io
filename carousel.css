@@ -4,13 +4,27 @@
 
 body {
   padding-bottom: 3rem;
-  color: #E9D0B2;
+  color: #f7ebdd;
   background-color: #0F0F0F;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #211C16;
+  background-color: #191919;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -63,10 +77,10 @@ body {
     transition: 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
-    background-color: #151412;
+    background-color: #191919;
   }
   #mainNav.navbar-shrink .navbar-brand,  #mainNav.navbar-shrink .nav-link {
-    color: #ACA386;
+    color: #7a746e;
   }
   #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .nav-link:hover, #mainNav.navbar-shrink .nav-link:active {
     color: #D4CFC0;
@@ -95,10 +109,20 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
-.carousel {
-
+#landing {
+  background-color: #F1DEC6;
 }
+
+.landing-text {
+  color: #191919;
+  font-size: 9.2vw;
+  width: auto;
+}
+
+.side-card {
+  background-color: #191919;
+}
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
@@ -107,7 +131,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 100vh;
+  height: 70vh;
 }
 .carousel-item > img {
   position: absolute;
@@ -115,7 +139,7 @@ body {
   left: 0;
   object-fit: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .midtext {
@@ -142,12 +166,30 @@ body {
   text-align: right;
 }
 
-#witam-cont {
-  color: #A48C70
+.secondary-text {
+  color: #f1dec6
 }
 
 .card {
   background-position: center;
+}
+
+.text-link {
+  color: #7a746e;
+}
+
+.copyright {
+  color: #7a746e;
+}
+
+.go-up {
+  color: #7a746e;
+  text-decoration: none;
+}
+
+.go-up:hover {
+  color: #f7ebdd;
+  text-decoration: underline;
 }
 
 /* MARKETING CONTENT
@@ -178,12 +220,18 @@ body {
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1;
   /* rtl:remove */
   letter-spacing: -.05rem;
 }
 
+/* CONTACT 
+------------------------- */
+
+.contact {
+  
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -201,8 +249,8 @@ body {
   }
 }
 
-@media (min-width: 62em) {
+/* @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
   }
-}
+} */

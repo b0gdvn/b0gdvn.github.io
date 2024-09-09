@@ -9,26 +9,10 @@
     <title>Bohdan Pynchenkov · Portfolio</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro" rel="stylesheet">
+    
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.css" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
@@ -45,8 +29,8 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#scrollspyHeading1">O MNIE</a></li>
-          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading2">PRACE</a></li>
-          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading3">USŁUGI</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading2">ZDJĘCIA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scrollspyHeading3">FILMY</a></li>
           <li class="nav-item"><a class="nav-link" href="#scrollspyHeading4">KONTAKT</a></li>
         </ul>
       </div>
@@ -55,21 +39,39 @@
 </header>
 
 <main>
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <div id="landing" class="container-fluid col-xxl-12 px-0 mx-0 py-5 mt-lg-0 mt-2">
+    <div class="row px-0 mx-0 justify-content-center">
+      <h1 class="landing-text">WIZJA → EKSPRESJA</h1>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="1.jpg" class="carousel-img">   
+    <div class="row px-0 mx-0 justify-content-center">
+      <div class="side-card col-lg-4 rounded-me">
+        Coś tam o mnie
       </div>
-      <div class="carousel-item">
-        <img src="2.jpg" class="carousel-img">
-      </div>
-      <div class="carousel-item">
-        <img src="3.jpg" class="carousel-img">
+      <div id="myCarousel" class="carousel slide col-lg-7 d-flex flex-wrap" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner rounded-me ms-lg-3">
+          <div class="carousel-item active">
+            <img src="1.jpg" class="carousel-img">   
+          </div>
+          <div class="carousel-item">
+            <img src="2.jpg" class="carousel-img">
+          </div>
+          <div class="carousel-item">
+            <img src="3.jpg" class="carousel-img">
+          </div>
+          <div class="carousel-item">
+            <img src="1.jpg" class="carousel-img">
+          </div>
+          <div class="carousel-item">
+            <img src="2.jpg" class="carousel-img">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -85,15 +87,16 @@
         <div id="witam" class="bigtext mt-0" style="text-align: left;">
           Witam!
         </div>
-        <div id="witam-cont" style="padding-left: 6rem; padding-right: 1rem;">
+        <div class="secondary-text" style="padding-left: 6rem; padding-right: 1rem;">
           <h1 class="display-6 fw-bold lh-1 mb-3" style="text-align: right; ">Robienie zdjęć i nagrywanie filmów to moja największa pasja, a to portfolio jest podsumowaniem mojego doświadczenia</h1>
-          <p class="lead" style="text-align: right;">Od wielu lat dokumentuję wszystko co się dzieje wokół mnie aparatem, głównie motoryzację, ludzi, krajobrazy i architekturę, ale lubię też próbować siebie w czymś nowym przy każdej okazji. Jestem otwarty na nowe projekty, które pozwolą mi realizować moje kreatywne pomysły i dostarczać najwyższej jakości produkcje, dążac do spełnienia oczekiwań klientów i osiągniecia wspólnej wizji. </p>
+          <p class="lead" style="text-align: right;">Od wielu lat dokumentuję wszystko co się dzieje wokół mnie kamerą, głównie podróże, motoryzację, ludzi, krajobrazy i architekturę, ale lubię też próbować siebie w czymś nowym przy każdej okazji. Jestem otwarty na nowe projekty, które pozwolą mi realizować moje kreatywne pomysły i dostarczać najwyższej jakości produkcje, dążac do spełnienia oczekiwań klientów i osiągniecia wspólnej wizji. </p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="midtext mt-0 text-center">
+    <a id="scrollspyHeading2" class="scrollitem"></a>
     Jakie zdjęcia robię?
   </div>
 
@@ -157,57 +160,75 @@
   </div>
 
   <div class="bigtext">
-    <a id="scrollspyHeading2" class="scrollitem"></a>
+    <a id="scrollspyHeading3" class="scrollitem"></a>
     Projekty <span>filmowe</span>
   </div>
   <div class="container marketing">
 
     <div class="row h-100">
       
-    </div><!-- /.row -->
+    </div>
 
     <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Sparrow - <span class="text-muted">LSD</span></h2>
-        <p class="lead">Dynamiczne ujęcia, nagrywane między innymi w trakcie jazdy rowerem pozwoliły udokumentować hobby Sparrow'a którym jest bieganie</p>
+      <div class="col-md-7 align-content-center">
+        <p class="featurette-heading">Sparrow - <span class="text-link">LSD</span></p>
+        <p class="lead secondary-text">Dynamiczne ujęcia, nagrywane między innymi w trakcie jazdy rowerem pozwoliły udokumentować hobby Sparrow'a którym jest bieganie</p>
       </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="LSD1.gif" width="500"></img>
+      <div class="col-md-5 d-flex">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-me" src="LSD1.gif" width="500"></img>
       </div>
     </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Segi - <span class="text-muted">Druga Szansa</span></h2>
+      <div class="col-md-7 align-content-center order-md-2">
+        <p class="featurette-heading">Segi - <span class="text-link">Druga Szansa</span></p>
         <p class="lead">Co może być lepszego od slow-mo ujęć zabawy z psem?</p>
       </div>
-      <div class="col-md-5 order-md-1">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="drugaszansa2.gif" width="500"></img>
+      <div class="col-md-5 d-flex order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-me" src="drugaszansa2.gif" width="500"></img>
       </div>
     </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Sparrow feat. Segi - <span class="text-muted">Yerba</span></h2>
+      <div class="col-md-7 align-content-center">
+        <p class="featurette-heading">Sparrow feat. Segi - <span class="text-link">Yerba</span></p>
         <p class="lead">Zabawa perspektywą, miłość do rozgrzewających napojów, Zaspa w całej okazałości, coś pięknego</p>
       </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="Yerba1.gif" width="500"></img>
+      <div class="col-md-5 d-flex">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-me" src="Yerba1.gif" width="500"></img>
       </div>
     </div>
 
     <hr class="featurette-divider">
 
+    <div class="row featurette">
+      <div class="col-md-7 align-content-center order-md-2">
+        <p class="featurette-heading">Saint Juku - <span class="text-link">Bryza</span></p>
+        <p class="lead">Romantyczne nadmorskie klimaty, statyczność i spokój</p>
+      </div>
+      <div class="col-md-5 d-flex order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-me" src="bryza1.gif" width="500"></img>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container contact">
+    <a id="scrollspyHeading4" class="scrollitem"></a>
+    <div id="witam" class="bigtext mt-4" style="text-align: left;">
+      Kontakt
+    </div>
+    <div class="row">Napisz do mnie!</div>
   </div>
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2022 Bohdan Pynchenkov</p>
+    <p class="float-end"><a class="go-up" href="#">Back to top ↑</a></p>
+    <p class="copyright">Bohdan Pynchenkov &copy; 2024</p>
   </footer>
 </main>
   <script src="bootstrap.bundle.min.js"></script>
