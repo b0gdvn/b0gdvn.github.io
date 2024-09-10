@@ -8,20 +8,6 @@ body {
   background-color: #0F0F0F;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
 #mainNav {
   min-height: 3.5rem;
   background-color: #191919;
@@ -91,6 +77,11 @@ body {
   }
 }
 
+@media (max-width: 575px) {
+  .container {
+    width: 97%;
+  }
+}
 
 .scrollitem {
   display: block;
@@ -109,18 +100,55 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-#landing {
+.landing {
   background-color: #F1DEC6;
+  width: 100%;
 }
 
 .landing-text {
   color: #191919;
-  font-size: 9.2vw;
-  width: auto;
+  font-size: 3.2em;
+  font-weight: 700;
 }
 
 .side-card {
-  background-color: #191919;
+  background: #191919;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+}
+
+.side-card:after {
+  background: linear-gradient(180deg, #191919, 90%, transparent),
+    radial-gradient(ellipse at bottom, #CBAC84, 70%, transparent);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -10;
+  transition: opacity 1s;
+}
+
+.side-card:hover:after {
+  opacity: 1;    
+}
+
+.side-card-call {
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-card-call:hover {
+  color: #dfd3c6;
+}
+
+.carousel-inner {
+  max-height: 40em;
 }
 
 /* Since positioning the image, we need to help out the caption */
@@ -131,8 +159,15 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 70vh;
+  height: 40vw;
+  max-height: 40em;
 }
+@media (max-width: 992px) {
+  .carousel-item {
+    height: 60vw;
+  }
+}
+
 .carousel-item > img {
   position: absolute;
   top: 0;
@@ -249,8 +284,28 @@ body {
   }
 }
 
-/* @media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
+@media (min-width: 576px) {
+  .landing-text {
+    font-size: 3.2em;
   }
-} */
+}
+@media (min-width: 768px) {
+  .landing-text {
+    font-size: 4.35em;
+  }
+}
+@media (min-width: 992px) {
+  .landing-text {
+    font-size: 5.87em;
+  }
+}
+@media (min-width: 1200px) {
+  .landing-text {
+    font-size: 7em;
+  }
+}
+@media (min-width: 1400px) {
+  .landing-text {
+    font-size: 8.13em;
+  }
+}
