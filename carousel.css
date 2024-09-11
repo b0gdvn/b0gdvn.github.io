@@ -107,7 +107,7 @@ body {
 
 .landing-text {
   color: #191919;
-  font-size: 3.2em;
+  font-size: 8.5vw;
   font-weight: 700;
 }
 
@@ -116,6 +116,12 @@ body {
   position: relative;
   z-index: 10;
   display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-card:hover {
+  color: inherit;
 }
 
 .side-card:after {
@@ -134,18 +140,18 @@ body {
 }
 
 .side-card:hover:after {
-  opacity: 1;    
+  opacity: 1;
+}
+
+.side-card-text {
+  font-size: 1.1em;
+  font-weight: 200;
 }
 
 .side-card-call {
   font-weight: 700;
-  text-decoration: none;
-  color: inherit;
-}
-
-.side-card-call:hover {
-  color: #dfd3c6;
-}
+  font-size: 1.2em;
+}  
 
 .carousel-inner {
   max-height: 40em;
@@ -178,6 +184,7 @@ body {
 }
 
 .midtext {
+
   font-size: 8vw;
   font-family: 'Playfair Display', Serif;
   font-weight: 700;
@@ -264,8 +271,8 @@ body {
 /* CONTACT 
 ------------------------- */
 
-.contact {
-  
+#kontakt {
+  font-size: 16em;
 }
 
 /* RESPONSIVE CSS
