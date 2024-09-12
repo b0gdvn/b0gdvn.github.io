@@ -117,6 +117,7 @@ body {
   z-index: 10;
   display: inline-block;
   text-decoration: none;
+  line-height: 1.5em;
   color: inherit;
 }
 
@@ -126,7 +127,7 @@ body {
 
 .side-card:after {
   background: linear-gradient(180deg, #191919, 90%, transparent),
-    radial-gradient(ellipse at bottom, #CBAC84, 70%, transparent);
+    radial-gradient(ellipse at bottom, #81694b, 70%, transparent);
   content: '';
   display: block;
   height: 100%;
@@ -168,11 +169,6 @@ body {
   height: 40vw;
   max-height: 40em;
 }
-@media (max-width: 992px) {
-  .carousel-item {
-    height: 60vw;
-  }
-}
 
 .carousel-item > img {
   position: absolute;
@@ -183,23 +179,22 @@ body {
   height: 100%;
 }
 
-.midtext {
-
-  font-size: 8vw;
-  font-family: 'Playfair Display', Serif;
-  font-weight: 700;
-  font-style: italic;
-  margin: 3rem 0;
-  line-height: 0.8;
+.me-photo {
+  object-fit: cover;
+  justify-content: center;
+  max-height: 80vw;
+  width: 100%;
 }
 
 .bigtext {
-  font-size: 18vw;
   font-family: 'Playfair Display', Serif;
   font-weight: 700;
   font-style: italic;
-  margin: 3rem 0;
-  line-height: 0.8;
+}
+
+.bigtext-about {
+  position: inherit;
+  font-size: 24.5vw;
 }
 
 .bigtext span {
@@ -209,7 +204,22 @@ body {
 }
 
 .secondary-text {
-  color: #f1dec6
+  color: #f1dec6;
+  text-align: left;
+}
+
+.secondary-text-1 {
+  line-height: normal;
+}
+
+.midtext {
+
+  font-size: 8vw;
+  font-family: 'Playfair Display', Serif;
+  font-weight: 700;
+  font-style: italic;
+  margin: 3rem 0;
+  line-height: 0.8;
 }
 
 .card {
@@ -291,28 +301,86 @@ body {
   }
 }
 
+/* sm */
 @media (min-width: 576px) {
   .landing-text {
     font-size: 3.2em;
   }
+
+  .bigtext-about {
+    font-size: 8.8em;
+  }
+
+  .big-text-spacer {
+    height: 0;
+  }
 }
+/* md */
 @media (min-width: 768px) {
   .landing-text {
     font-size: 4.35em;
   }
+
+  .bigtext-about {
+    font-size: 12em;
+  }
+
+  .secondary-text {
+    line-height: inherit;
+    padding-left: 6em;
+    padding-right: 1em;
+    text-align: right;
+  }
+
 }
+/* lg */
 @media (min-width: 992px) {
   .landing-text {
     font-size: 5.87em;
   }
+
+  .carousel-item {
+    height: 60vw;
+  }
+
+  .me-photo {
+    max-height: 100%;
+  }
+
+  .bigtext-about {
+    font-size: 18vw;
+    right: 0;
+    margin-right: 30px;
+    white-space: nowrap;
+    line-height: 0.8;
+    position: absolute;
+  }
+  
+  .big-text-spacer {
+    height: 18vw;
+  }
+
+  .secondary-text-1 {
+    line-height: 1;
+  }
 }
+/* xl */
 @media (min-width: 1200px) {
   .landing-text {
     font-size: 7em;
   }
 }
+/* xxl */
 @media (min-width: 1400px) {
   .landing-text {
     font-size: 8.13em;
+  }
+
+  .bigtext-about {
+    font-size: 16.5em;
+  }
+
+  .big-text-spacer {
+    height: 16.5em;
   }
 }
