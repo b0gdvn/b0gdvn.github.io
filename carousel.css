@@ -230,10 +230,34 @@ body {
 
 .card {
   background-position: center;
+
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.9) 100%);
+  z-index: 1;
+}
+
+.card-text {
+  z-index: 2;
 }
 
 .text-link {
+  text-decoration: none;
   color: #7a746e;
+  transition: color 0.3s ease;
+}
+
+.text-link:hover {
+  text-decoration: none;
+  color: #e8bd93;
+  transition: color 0.3s ease;
 }
 
 .copyright {
@@ -356,6 +380,11 @@ body {
     font-size: 5.87em;
   }
 
+  .side-card-text {
+    font-size: 0.8em;
+    line-height: 1.5;
+  }
+  
   .carousel-item {
     height: 100%;
   }
@@ -403,7 +432,12 @@ body {
   .landing-text {
     font-size: 7em;
   }
-    
+  
+  .side-card-text {
+    font-size: 1em;
+    line-height: 1.3;
+  }
+
   .bigtext-films {
     font-size: 12.6em;
     line-height: 0.85;
@@ -418,6 +452,11 @@ body {
 @media (min-width: 1400px) {
   .landing-text {
     font-size: 8.13em;
+  }
+
+  .side-card-text {
+    font-size: 1.2em;
+    line-height: 1.3;
   }
 
   .bigtext-about {
