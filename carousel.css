@@ -311,8 +311,16 @@ body {
 /* CONTACT 
 ------------------------- */
 
-#kontakt {
-  font-size: 16em;
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  text-decoration: none;
+  color: #e8bd93;
+  transition: color 0.3s ease;
 }
 
 /* RESPONSIVE CSS
