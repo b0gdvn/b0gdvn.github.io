@@ -298,6 +298,7 @@ body {
 
 .featurette-divider {
   margin: 2rem 0; /* Space out the Bootstrap <hr> more */
+  border: 1px solid #645850;
 }
 
 /* Thin out the marketing headings */
@@ -315,12 +316,101 @@ body {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contact-link:hover {
   text-decoration: none;
   color: #e8bd93;
   transition: color 0.3s ease;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 100; /* Stay on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #1b1b1b;
+  margin: 3em auto;
+  padding: 1em;
+  border-radius: 1em;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #7a746e;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #88473a;
+}
+
+input[name="user_name"], input[name="user_email"], textarea[name="message"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #332f2d;
+  background-color: transparent;
+  padding: 0.5em 0.8em;
+  font-size: 0.7em;
+  color: #7a746e; /* Adjust text color if needed */
+  outline: none; /* Removes the default focus outline */
+  resize: none;
+}
+
+textarea[name="message"]{
+  height: 5em;
+}
+
+input[name="user_name"]:hover, input[name="user_email"]:hover, textarea[name="message"]:hover {
+  color: #f7ebdd; /* Change border color on focus (optional) */
+  border-color: #c8a165;
+}
+
+input[name="user_name"]:focus {
+  border-color: #c8a165; /* Change border color on focus (optional) */
+}
+
+button[type="submit"] {
+  background: none;
+  width: 100%;
+  color: #7a746e;
+  padding: 0.5em 1em;
+  border-radius: 0.8em;
+  margin: 0.5em auto 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #F1DEC6; /* Darker green on hover */
+  color: #0F0F0F;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98); /* Slightly scale down when clicked */
 }
 
 /* RESPONSIVE CSS
