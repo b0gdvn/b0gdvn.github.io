@@ -111,7 +111,7 @@
 
     <div class="row row-cols-1 row-cols-lg-3 p-0 mb-5 justify-content-center">
 
-      <div class="rowh col-12 col-sm-6 col-lg-4 mb-5">
+      <div data-modal="modal1" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc1.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
             <h2 class="card-text display-7 lh-1 fw-bold">Portret</h2>
@@ -159,6 +159,21 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="carousel-container">
+        <button class="prev" onclick="moveSlide(-1, 'modal1')">&#10094;</button> <!-- Left arrow -->
+        <div class="carousel">
+            <img src="desc5.jpg" class="carousel-image">
+            <img src="desc6.jpg" class="carousel-image">
+            <!-- Add 8 more images -->
+        </div>
+        <button class="next" onclick="moveSlide(1, 'modal1')">&#10095;</button> <!-- Right arrow -->
+    </div>
     </div>
   </div>
 
@@ -230,15 +245,15 @@
         <a class="contact-link d-flex" target="_blank" href="https://www.instagram.com/b0gdvn/">Instagram</a>
         <a class="contact-link d-flex" target="_blank" href="https://m.me/b0gdvn">Messenger</a>
         <a class="contact-link d-flex" target="_blank" href="https://t.me/b0gdvn">Telegram</a>
-        <button id="openModalBtn" class="contact-link d-flex">Wyślij e-mail</button>
-        <div id="modal" class="modal">
-          <div class="modal-content">
+        <button id="openModalMailBtn" class="contact-link d-flex">Wyślij e-mail</button>
+        <div id="modal-mail" class="modal-mail">
+          <div class="modal-mail-content">
             <span class="close">&times;</span>
             <form id="contact-form">
               <input type="text" name="user_name" placeholder="Twoje imię" required>
               <input type="email" name="user_email" placeholder="Twój e-mail" required>
               <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
-              <button type="submit">Wyślij <i class="ps-3 fa-solid fa-circle-arrow-right fa-sm"></i></button>
+              <button id="submit" type="submit">Wyślij <i class="ps-3 fa-solid fa-circle-arrow-right fa-sm"></i></button>
             </form>
             <div id="result-message"></div>
           </div>
@@ -305,42 +320,88 @@
   <script type="text/javascript">
       document.getElementById('contact-form').addEventListener('submit', function(event) {
           event.preventDefault(); // Prevent form from refreshing the page
-
+          
+          const submitButton = document.getElementById('submit'); // Get the submit button
+          
           // Send email using EmailJS
           emailjs.sendForm('service_w6wtnhy', 'template_x0kt81y', this)
           .then(function(response) {
               console.log('SUCCESS!', response.status, response.text);
-              document.getElementById('result-message').innerText = "Email sent successfully!";
+              document.getElementById('result-message').innerText = "Email wysłany, odezwę się w najkrótszym terminie!";
+              
+              // Disable the submit button after success
+              submitButton.disabled = true;
+              submitButton.innerText = "Wysłano"; // Optional: Change the button text to indicate success
           }, function(error) {
               console.log('FAILED...', error);
-              document.getElementById('result-message').innerText = "Failed to send email. Please try again.";
+              document.getElementById('result-message').innerText = "Nie udało się wysłać maila, spróbuj kontakt przez social media.";
           });
       });
   </script>
   <script type="text/javascript">
-    const modal = document.getElementById("modal");
-    const openModalBtn = document.getElementById("openModalBtn");
+    const modalMail = document.getElementById("modal-mail");
+    const openModalMailBtn = document.getElementById("openModalMailBtn");
     const closeBtn = document.querySelector(".close");
 
     // Open modal when the button is clicked
-    openModalBtn.addEventListener("click", function() {
-      modal.style.display = "block";
+    openModalMailBtn.addEventListener("click", function() {
+      modalMail.style.display = "block";
       document.body.style.overflow = "hidden"; // Disable page scroll
     });
 
     // Close modal when the close button (×) is clicked
     closeBtn.addEventListener("click", function() {
-      modal.style.display = "none";
+      modalMail.style.display = "none";
       document.body.style.overflow = "auto"; // Enable page scroll
     });
 
     // Close modal when clicking outside the modal content
     window.addEventListener("click", function(event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
+      if (event.target === modalMail) {
+        modalMail.style.display = "none";
         document.body.style.overflow = "auto"; // Enable page scroll
       }
     });
+
+    // Get all the buttons and modals
+    const galleryButtons = document.querySelectorAll('.gallery-btn');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close');
+
+    // Open the modal when a gallery button is clicked
+    galleryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'block';
+        });
+    });
+
+    // Close the modal when the 'x' button is clicked
+    closeButtons.forEach(close => {
+        close.addEventListener('click', function() {
+            this.parentElement.parentElement.style.display = 'none';
+        });
+    });
+
+    // Close the modal when clicking outside of the modal content
+    window.addEventListener('click', function(event) {
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    function moveSlide(direction, modalId) {
+        const modal = document.getElementById(modalId);
+        const carousel = modal.querySelector('.carousel');
+        const images = modal.querySelectorAll('.carousel-image');
+        const currentScroll = carousel.scrollLeft;
+        const imageWidth = images[0].clientWidth;
+        
+        // Move left or right depending on direction
+        carousel.scrollLeft = currentScroll + (imageWidth * direction);
+    }
   </script>
 </body>
 
