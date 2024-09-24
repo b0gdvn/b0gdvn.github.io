@@ -127,7 +127,7 @@
         </div>
       </div>
 
-      <div class="rowh col-12 col-sm-6 col-lg-4 mb-5">
+      <div data-modal="modal3" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc3.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
             <h2 class="card-text display-7 lh-1 fw-bold">Sport</h2>
@@ -135,7 +135,7 @@
         </div>
       </div>
 
-      <div class="rowh col-12 col-sm-6 col-lg-4 mb-5">
+      <div data-modal="modal4" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc4.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
             <h2 class="card-text display-7 lh-1 fw-bold">Krajobraz</h2>
@@ -143,7 +143,7 @@
         </div>
       </div>
 
-      <div class="rowh col-12 col-sm-6 col-lg-4 mb-5">
+      <div data-modal="modal5" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc5.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
             <h2 class="card-text display-7 lh-1 fw-bold">Architektura</h2>
@@ -151,7 +151,7 @@
         </div>
       </div>
 
-      <div class="rowh col-12 col-sm-6 col-lg-4 mb-5">
+      <div data-modal="modal6" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc6.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
             <h2 class="card-text display-7 lh-1 fw-bold">Produkt</h2>
@@ -163,56 +163,116 @@
   </div>
 
   <div class="modal" id="modal1">
+    <button class="prev" onclick="moveSlide(-1, 'modal1')">&#10094;</button>
     <div class="modal-content-gallery">
-      <span class="close">&times;</span>
       <div class="carousel-container">
-        <button class="prev" onclick="moveSlide(-1, 'modal1')">&#10094;</button> <!-- Left arrow -->
         <div class="carousel">
-            <img src="portraits/p-1.jpg" class="carousel-image carousel-image-1">
-            <img src="portraits/p-2.jpg" class="carousel-image">
-            <img src="portraits/p-3.jpg" class="carousel-image">
-            <img src="portraits/p-4.jpg" class="carousel-image">
-            <img src="portraits/p-5.jpg" class="carousel-image">
+          <img src="portraits/p-1.jpg" class="carousel-image carousel-image-1">
+          <img src="portraits/p-2.jpg" class="carousel-image">
+          <img src="portraits/p-3.jpg" class="carousel-image">
+          <img src="portraits/p-4.jpg" class="carousel-image">
+          <img src="portraits/p-5.jpg" class="carousel-image">
         </div>
-        <button class="next" onclick="moveSlide(1, 'modal1')">&#10095;</button> <!-- Right arrow -->
+      </div>
     </div>
-    </div>
+    <button class="next" onclick="moveSlide(1, 'modal1')">&#10095;</button>
   </div>
 
   <div class="modal" id="modal2">
+    <button class="prev" onclick="moveSlide(-1, 'modal2')">&#10094;</button>
     <div class="modal-content-gallery">
-      <span class="close">&times;</span>
       <div class="carousel-container">
-        <button class="prev" onclick="moveSlide(-1, 'modal2')">&#10094;</button> <!-- Left arrow -->
         <div class="carousel">
-            <img src="cars/car-1.jpg" class="carousel-image carousel-image-1">
-            <img src="cars/car-2.jpg" class="carousel-image">
-            <img src="cars/car-3.jpg" class="carousel-image">
-            <img src="cars/car-4.jpg" class="carousel-image">
-            <img src="cars/car-5.jpg" class="carousel-image">
-            <img src="cars/car-6.jpg" class="carousel-image">
-            <img src="cars/car-7.jpg" class="carousel-image">
-            <img src="cars/car-8.jpg" class="carousel-image">
-            <img src="cars/car-9.jpg" class="carousel-image">
-            <img src="cars/car-10.jpg" class="carousel-image">
-            <img src="cars/car-11.jpg" class="carousel-image">
-            <img src="cars/car-12.jpg" class="carousel-image">
-            <img src="cars/car-13.jpg" class="carousel-image">
-            <img src="cars/car-14.jpg" class="carousel-image">
-            <img src="cars/car-15.jpg" class="carousel-image">
-            <img src="cars/car-16.jpg" class="carousel-image">
-            <img src="cars/car-17.jpg" class="carousel-image">
-            <img src="cars/car-18.jpg" class="carousel-image">
-            <img src="cars/car-19.jpg" class="carousel-image">
-            <img src="cars/car-20.jpg" class="carousel-image">
-            <img src="cars/car-21.jpg" class="carousel-image">
-            <img src="cars/car-22.jpg" class="carousel-image">
-            <img src="cars/car-23.jpg" class="carousel-image">
-            <img src="cars/car-24.jpg" class="carousel-image">
+          <img src="cars/car-01.jpg" class="carousel-image carousel-image-1">
+          <img src="cars/car-02.jpg" class="carousel-image">
+          <img src="cars/car-03.jpg" class="carousel-image">
+          <img src="cars/car-04.jpg" class="carousel-image">
+          <img src="cars/car-05.jpg" class="carousel-image">
+          <img src="cars/car-06.jpg" class="carousel-image">
+          <img src="cars/car-07.jpg" class="carousel-image">
+          <img src="cars/car-08.jpg" class="carousel-image">
+          <img src="cars/car-09.jpg" class="carousel-image">
+          <img src="cars/car-010.jpg" class="carousel-image">
+          <img src="cars/car-011.jpg" class="carousel-image">
+          <img src="cars/car-012.jpg" class="carousel-image">
+          <img src="cars/car-013.jpg" class="carousel-image">
+          <img src="cars/car-014.jpg" class="carousel-image">
+          <img src="cars/car-015.jpg" class="carousel-image">
+          <img src="cars/car-016.jpg" class="carousel-image">
+          <img src="cars/car-017.jpg" class="carousel-image">
+          <img src="cars/car-018.jpg" class="carousel-image">
+          <img src="cars/car-019.jpg" class="carousel-image">
+          <img src="cars/car-020.jpg" class="carousel-image">
+          <img src="cars/car-021.jpg" class="carousel-image">
+          <img src="cars/car-022.jpg" class="carousel-image">
+          <img src="cars/car-023.jpg" class="carousel-image">
+          <img src="cars/car-024.jpg" class="carousel-image">
+          <img src="cars/car-025.jpg" class="carousel-image">
         </div>
-        <button class="next" onclick="moveSlide(1, 'modal2')">&#10095;</button> <!-- Right arrow -->
+      </div>
     </div>
+    <button class="next" onclick="moveSlide(1, 'modal2')">&#10095;</button>
+  </div>
+
+  <div class="modal" id="modal3">
+    <button class="prev" onclick="moveSlide(-1, 'modal3')">&#10094;</button>
+    <div class="modal-content-gallery">
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="portraits/p-1.jpg" class="carousel-image carousel-image-1">
+          <img src="portraits/p-2.jpg" class="carousel-image">
+          <img src="portraits/p-3.jpg" class="carousel-image">
+          <img src="portraits/p-4.jpg" class="carousel-image">
+          <img src="portraits/p-5.jpg" class="carousel-image">
+        </div>
+      </div>
     </div>
+    <button class="next" onclick="moveSlide(1, 'modal3')">&#10095;</button>
+  </div>
+
+  <div class="modal" id="modal4">
+    <button class="prev" onclick="moveSlide(-1, 'modal4')">&#10094;</button>
+    <div class="modal-content-gallery">
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="landscape/ls-01.jpg" class="carousel-image carousel-image-1">
+          <img src="portraits/p-2.jpg" class="carousel-image">
+        </div>
+      </div>
+    </div>
+    <button class="next" onclick="moveSlide(1, 'modal4')">&#10095;</button>
+  </div>
+
+  <div class="modal" id="modal5">
+    <button class="prev" onclick="moveSlide(-1, 'modal5')">&#10094;</button>
+    <div class="modal-content-gallery">
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="portraits/p-1.jpg" class="carousel-image carousel-image-1">
+          <img src="portraits/p-2.jpg" class="carousel-image">
+          <img src="portraits/p-3.jpg" class="carousel-image">
+          <img src="portraits/p-4.jpg" class="carousel-image">
+          <img src="portraits/p-5.jpg" class="carousel-image">
+        </div>
+      </div>
+    </div>
+    <button class="next" onclick="moveSlide(1, 'modal5')">&#10095;</button>
+  </div>
+
+  <div class="modal" id="modal6">
+    <button class="prev" onclick="moveSlide(-1, 'modal6')">&#10094;</button>
+    <div class="modal-content-gallery">
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="portraits/p-1.jpg" class="carousel-image carousel-image-1">
+          <img src="portraits/p-2.jpg" class="carousel-image">
+          <img src="portraits/p-3.jpg" class="carousel-image">
+          <img src="portraits/p-4.jpg" class="carousel-image">
+          <img src="portraits/p-5.jpg" class="carousel-image">
+        </div>
+      </div>
+    </div>
+    <button class="next" onclick="moveSlide(1, 'modal6')">&#10095;</button>
   </div>
 
   <div class="container bigtext bigtext-films mb-5">
@@ -413,7 +473,7 @@
     galleryButtons.forEach(button => {
         button.addEventListener('click', function() {
             const modalId = this.getAttribute('data-modal');
-            document.getElementById(modalId).style.display = 'block';
+            document.getElementById(modalId).style.display = 'flex';
             document.body.style.overflow = 'hidden';  // Lock scrolling
         });
     });
