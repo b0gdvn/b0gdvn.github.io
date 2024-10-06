@@ -45,7 +45,7 @@ body {
   font-weight: 700;
 }
 #mainNav .navbar-brand:hover {
-  color: #fff;;
+  color: #fff;
   font-weight: 700;
 }
 #mainNav .navbar-nav .nav-item:hover {
@@ -116,7 +116,7 @@ body {
 -------------------------------------------------- */
 
 .landing {
-  background-color: #F1DEC6;
+  background-color: #f7ebdd;
   width: 100%;
 }
 
@@ -226,7 +226,7 @@ body {
 }
 
 .secondary-text {
-  color: #f1dec6;
+  color: #f7ebdd;
   text-align: left;
 }
 
@@ -341,7 +341,7 @@ body {
 /* Change hover effects to ensure visibility when hovered */
 .prev:hover, .next:hover {
   transition: color 0.3s ease;
-  color: #F1DEC6;
+  color: #f7ebdd;
 }
 
 .text-link {
@@ -352,7 +352,7 @@ body {
 
 .text-link:hover {
   text-decoration: none;
-  color: #e8bd93;
+  color: #1d613b;
   transition: color 0.3s ease;
 }
 
@@ -420,7 +420,7 @@ body {
 
 .contact-link:hover {
   text-decoration: none;
-  color: #e8bd93;
+  color: #1d613b;
   transition: color 0.3s ease;
 }
 
@@ -470,8 +470,8 @@ input[name="user_name"], input[name="user_email"], textarea[name="message"] {
   background-color: transparent;
   padding: 0.5em 0.8em;
   font-size: 0.7em;
-  color: #7a746e; /* Adjust text color if needed */
-  outline: none; /* Removes the default focus outline */
+  color: #7a746e;
+  outline: none;
   resize: none;
 }
 
@@ -480,12 +480,12 @@ textarea[name="message"]{
 }
 
 input[name="user_name"]:hover, input[name="user_email"]:hover, textarea[name="message"]:hover {
-  color: #f7ebdd; /* Change border color on focus (optional) */
+  color: #f7ebdd;
   border-color: #c8a165;
 }
 
 input[name="user_name"]:focus {
-  border-color: #c8a165; /* Change border color on focus (optional) */
+  border-color: #c8a165;
 }
 
 button[type="submit"] {
@@ -501,16 +501,16 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #F1DEC6; /* Darker green on hover */
+  background-color: #f7ebdd;
   color: #0F0F0F;
 }
 
 button[type="submit"]:active {
-  transform: scale(0.98); /* Slightly scale down when clicked */
+  transform: scale(0.98);
 }
 
 button[type="submit"]:disabled:hover {
-  background: none; /* Keeps the same background color */
+  background: none;
   color: #7a746e;
 }
 
