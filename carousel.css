@@ -557,6 +557,7 @@ button[type="submit"]:disabled:hover {
   }
 
   .midtext {
+    margin-top: 5rem;
     font-size: 10vw;
   }
 
