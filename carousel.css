@@ -28,6 +28,11 @@ body {
   background-color: #191919;
 }
 
+.mainNav {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
 #mainNav .navbar-toggler {
   font-size: 95%;
   border: 0px;
@@ -53,7 +58,7 @@ body {
 }
 
 #mainNav .navbar-brand img {
-  height: 25px;
+  height: 28px;
 }
 
 #mainNav .navbar-nav .nav-link:hover {
@@ -80,8 +85,13 @@ body {
     padding-bottom: 0;
     border-bottom: none;
     background-color: transparent;
-    transition: background-color 0.5s ease-in-out;
+    transition: opacity 1s ease;
   }
+
+  .mainNav {
+    opacity: 0;
+  }
+
   #mainNav .navbar-brand, #mainNav .nav-link  {
     color: rgba(80, 80, 80, 0.6);
     transition: 0.3s ease-in-out;
@@ -119,11 +129,15 @@ body {
 }
 
 .subText, .mainText {
-  opacity: 1;
+  opacity: 0;
   transform: translateY(10px);
   transition: opacity 1s ease, transform 1s ease;
   text-align: center;
   margin: 0;
+}
+
+.subText {
+  color: #A2988F;
 }
 
 .intro h1 {
@@ -137,10 +151,10 @@ body {
   font-weight: 200;
   line-height: 1.3;
   margin-top: 0.7em;
-  opacity: 0.7;
 }
 
 .porsche {
+  opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
   display: block;
   margin: 2.5em auto 0;
@@ -148,6 +162,11 @@ body {
   height: 40vh;         /* take full viewport height */
   object-fit: cover;     /* crop sides */
   object-position: center;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scrollitem {

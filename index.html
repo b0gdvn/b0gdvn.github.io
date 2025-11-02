@@ -26,7 +26,7 @@
   <body>
     
 <header>
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark" id="mainNav">
+  <nav class="mainNav navbar fixed-top navbar-expand-md navbar-dark" id="mainNav">
     <div class="container container-nav">
       <a class="navbar-brand" href="#"><img src="logo_fs.png" alt="FILMUJESOBIE Logo"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
       <div data-modal="modal1" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc1.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
-            <h2 class="card-text display-7 lh-1 fw-bold">Portret</h2>
+            <h2 class="card-text display-7 lh-1 fw-bold">BMW M5</h2>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
       <div data-modal="modal2" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc2.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
-            <h2 class="card-text display-7 lh-1 fw-bold">Motoryzacja</h2>
+            <h2 class="card-text display-7 lh-1 fw-bold">Porsche 993</h2>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
       <div data-modal="modal3" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc3.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
-            <h2 class="card-text display-7 lh-1 fw-bold">Sport</h2>
+            <h2 class="card-text display-7 lh-1 fw-bold">GR8</h2>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
       <div data-modal="modal4" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc4.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
-            <h2 class="card-text display-7 lh-1 fw-bold">Krajobraz</h2>
+            <h2 class="card-text display-7 lh-1 fw-bold">Cupra Tavascan</h2>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@
       <div data-modal="modal5" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc5.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
-            <h2 class="card-text display-7 lh-1 fw-bold">Architektura</h2>
+            <h2 class="card-text display-7 lh-1 fw-bold">Lexus RZ 450e</h2>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
       <div data-modal="modal6" class="rowh col-12 col-sm-6 col-lg-4 mb-5 gallery-btn">
         <div class="card card-cover h-100 overflow-hidden bg-dark border-0 rounded-me shadow-lg" style="background-image: url('desc6.jpg'); background-size: cover; min-height: 600px;">
           <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1" style="justify-content: flex-end; text-align: center;">
-            <h2 class="card-text display-7 lh-1 fw-bold">Produkt</h2>
+            <h2 class="card-text display-7 lh-1 fw-bold">BMW X2</h2>
           </div>
         </div>
       </div>
@@ -447,7 +447,7 @@
               if (!navbarCollapsible) {
                   return;
               }
-              if (window.scrollY < 50) {
+              if (window.scrollY < 500) {
                   navbarCollapsible.classList.remove('navbar-shrink')
               } else {
                   navbarCollapsible.classList.add('navbar-shrink')
@@ -568,14 +568,48 @@
         });
     });
 
-    // Fade-in effect for the content
-    window.addEventListener('load', () => {
-      // opóźnienie 700 ms przed pojawieniem się treści
-      setTimeout(() => {
-        document.getElementById('mojezdjecia-text').classList.add('visible');
-      }, 200);
-    });
+    // INTRO ANIMATION (separate from observer)
+    const porsche = document.getElementById('porsche');
+    const mainText = document.getElementById('mainText');
+    const subText = document.getElementById('subText');
+    const navbar = document.getElementById('mainNav');
+    const photos = document.getElementById('mojezdjecia-text');
 
+    // Ensure Porsche image starts hidden for animation
+    porsche.style.opacity = '0';
+    porsche.style.transform = 'translateY(20px)';
+    porsche.style.transition = 'opacity 1s ease, transform 1s ease';
+
+    setTimeout(() => {
+      porsche.classList.add('visible');
+      // Remove inline style after animation to allow CSS hover etc.
+      setTimeout(() => {
+      porsche.style.opacity = '';
+      porsche.style.transform = '';
+      porsche.style.transition = '';
+      }, 100);
+    }, 100);
+
+    setTimeout(() => mainText.classList.add('visible'), 1000);
+    setTimeout(() => subText.classList.add('visible'), 1200);
+    setTimeout(() => navbar.classList.add('visible'), 2300);
+    setTimeout(() => photos.classList.add('visible'), 2500);
+
+    // SCROLL FADE LOGIC FOR OTHER SECTIONS
+    const sections = document.querySelectorAll('section:not(#intro)');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Carousel functionality
     function moveSlide(direction, modalId) {
         const modal = document.getElementById(modalId);
         const images = modal.querySelectorAll('.carousel-image');
