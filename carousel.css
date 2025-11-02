@@ -52,6 +52,10 @@ body {
   font-weight: 700;
 }
 
+#mainNav .navbar-brand img {
+  height: 25px;
+}
+
 #mainNav .navbar-nav .nav-link:hover {
   color: #1d613b !important;
   outline: none;
@@ -107,6 +111,13 @@ body {
   }
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .subText, .mainText {
   opacity: 1;
   transform: translateY(10px);
@@ -116,13 +127,13 @@ body {
 }
 
 .intro h1 {
-  font-size: 3.2em;
+  font-size: 2.1em;
   font-weight: 700;
   margin-top: 2em;
 }
 
 .intro p {
-  font-size: 1.2em;
+  font-size: 0.7em;
   font-weight: 200;
   line-height: 1.3;
   margin-top: 0.7em;
@@ -130,14 +141,13 @@ body {
 }
 
 .porsche {
-  width: clamp(40%, 100%, 2000px);
-  height: auto;
-  object-fit: cover;
   transition: opacity 1s ease, transform 1s ease;
   display: block;
   margin: 2.5em auto 0;
-  /* For vertical centering in a flex container: */
-  align-self: center;
+  width: 100vw;          /* fill the width */
+  height: 40vh;         /* take full viewport height */
+  object-fit: cover;     /* crop sides */
+  object-position: center;
 }
 
 .scrollitem {
@@ -531,16 +541,16 @@ button[type="submit"]:disabled:hover {
 }
 /* md */
 @media (min-width: 768px) {
+  #mainNav .navbar-brand img {
+    height: 40px;
+  }
+
   .intro h1 {
     font-size: 2.3em;
   }
 
   .intro p {
     font-size: 0.85em;
-  }
-
-  .porsche {
-    width: clamp(40%, 95vw, 2000px);
   }
 
   .carousel-item {
@@ -578,7 +588,8 @@ button[type="submit"]:disabled:hover {
   }
 
   .porsche {
-    width: clamp(40%, 90vw, 2000px);
+    width: clamp(40%, 95vw, 2000px);
+    height: auto;
   }
 
   .side-card-text {
@@ -656,6 +667,10 @@ button[type="submit"]:disabled:hover {
 }
 /* xxl */
 @media (min-width: 1400px) {
+  .intro {
+    height: 100vh;
+  }
+
   .intro h1 {
     font-size: 3.5em;
   }
