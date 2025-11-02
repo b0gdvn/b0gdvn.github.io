@@ -107,6 +107,39 @@ body {
   }
 }
 
+.subText, .mainText {
+  opacity: 1;
+  transform: translateY(10px);
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: center;
+  margin: 0;
+}
+
+.intro h1 {
+  font-size: 3.2em;
+  font-weight: 700;
+  margin-top: 2em;
+}
+
+.intro p {
+  font-size: 1.2em;
+  font-weight: 200;
+  line-height: 1.3;
+  margin-top: 0.7em;
+  opacity: 0.7;
+}
+
+.porsche {
+  width: clamp(40%, 100%, 2000px);
+  height: auto;
+  object-fit: cover;
+  transition: opacity 1s ease, transform 1s ease;
+  display: block;
+  margin: 2.5em auto 0;
+  /* For vertical centering in a flex container: */
+  align-self: center;
+}
+
 .scrollitem {
   display: block;
   position: relative;
@@ -166,13 +199,24 @@ body {
 }
 
 .midtext {
-  font-size: 6em;
+  font-size: 5.4em;
   font-family: 'Playfair Display', Serif;
   font-weight: 700;
   font-style: italic;
   margin: 0;
   line-height: 1;
   margin-top: 5rem;
+}
+
+.mojezdjecia-text {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.mojezdjecia-text.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card {
@@ -457,8 +501,12 @@ button[type="submit"]:disabled:hover {
 
 /* sm */
 @media (min-width: 576px) {
-  .landing-text {
-    font-size: 3.2em;
+  .intro h1 {
+    font-size: 2.3em;
+  }
+
+  .intro p {
+    font-size: 0.85em;
   }
 
   .carousel-item {
@@ -483,8 +531,16 @@ button[type="submit"]:disabled:hover {
 }
 /* md */
 @media (min-width: 768px) {
-  .landing-text {
-    font-size: 4.35em;
+  .intro h1 {
+    font-size: 2.3em;
+  }
+
+  .intro p {
+    font-size: 0.85em;
+  }
+
+  .porsche {
+    width: clamp(40%, 95vw, 2000px);
   }
 
   .carousel-item {
@@ -513,8 +569,16 @@ button[type="submit"]:disabled:hover {
 }
 /* lg */
 @media (min-width: 992px) {
-  .landing-text {
-    font-size: 5.87em;
+  .intro h1 {
+    font-size: 2.6em;
+  }
+
+  .intro p {
+    font-size: 0.95em;
+  }
+
+  .porsche {
+    width: clamp(40%, 90vw, 2000px);
   }
 
   .side-card-text {
@@ -558,7 +622,7 @@ button[type="submit"]:disabled:hover {
 
   .midtext {
     margin-top: 5rem;
-    font-size: 10vw;
+    font-size: 6vw;
   }
 
   .featurette-heading {
@@ -567,10 +631,14 @@ button[type="submit"]:disabled:hover {
 }
 /* xl */
 @media (min-width: 1200px) {
-  .landing-text {
-    font-size: 7em;
+  .intro h1 {
+    font-size: 3em;
   }
-  
+
+  .intro p {
+    font-size: 1.11em;
+  }
+
   .side-card-text {
     font-size: 1em;
     line-height: 1.3;
@@ -588,8 +656,12 @@ button[type="submit"]:disabled:hover {
 }
 /* xxl */
 @media (min-width: 1400px) {
-  .landing-text {
-    font-size: 8.13em;
+  .intro h1 {
+    font-size: 3.5em;
+  }
+
+  .intro p {
+    font-size: 1.33em;
   }
 
   .side-card-text {
@@ -615,7 +687,7 @@ button[type="submit"]:disabled:hover {
   }
 
   .midtext {
-    font-size: 9em;
+    font-size: 6.4em;
   }
 
   .featurette-heading {

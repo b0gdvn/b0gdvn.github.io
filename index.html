@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Profesjonalne zdjęcia i filmy z Gdyni i Trójmiasta – portrety, fotografia samochodów, krajobrazów, architektury, teledyski, rolki na Instagram, filmy podróżnicze. Skontaktuj się i zarezerwuj sesję już dziś!">
     <meta name="author" content="Bohdan P">
-    <title>Filmuje sobie · Portfolio</title>
+    <title>Filmujesobie · Portfolio</title>
     <link rel="canonical" href="https://b0gdvn.github.io">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -28,7 +28,7 @@
 <header>
   <nav class="navbar fixed-top navbar-expand-md navbar-dark" id="mainNav">
     <div class="container container-nav">
-      <a class="navbar-brand" href="#">B0GDVN</a>
+      <a class="navbar-brand" href="#"><img src="logo_fs.png" alt="FILMUJESOBIE Logo" height="40"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,10 +46,15 @@
 </header>
 
 <main>
+  <div class="intro">
+    <h1 id="mainText" class="mainText">FOTOGRAFIA I FILMY</h1>
+    <p id="subText" class="subText">Tworzone we współpracy z firmami z branży motoryzacyjnej,<br> które przyciągają uwagę i napędzają sprzedaż.</p>
+    <img id="porsche" class="porsche" src="porsche_darkness.png">
+  </div>
 
-  <div class="midtext text-center">
+  <div id="mojezdjecia-text" class="midtext text-center mojezdjecia-text">
     <a id="mojezdjecia" class="scrollitem"></a>
-    Jakie zdjęcia robię?
+    Wybrane projekty zdjęciowe
   </div>
 
   <div class="container py-5" id="custom-cards">
@@ -428,7 +433,7 @@
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a class="go-up" href="#">Powrót do góry ↑</a></p>
-    <p class="copyright">B0GDVN &copy; 2024</p>
+    <p class="copyright">FILMUJESOBIE &copy; 2025</p>
   </footer>
 </main>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -503,7 +508,7 @@
   </script>
 
   <script type="text/javascript">
-    
+
     const modalMail = document.getElementById("modal-mail");
     const openModalMailBtn = document.getElementById("openModalMailBtn");
     const closeBtn = document.querySelector(".close");
@@ -561,6 +566,14 @@
                 currentImageIndex = 0;
             }
         });
+    });
+
+    // Fade-in effect for the content
+    window.addEventListener('load', () => {
+      // opóźnienie 700 ms przed pojawieniem się treści
+      setTimeout(() => {
+        document.getElementById('mojezdjecia-text').classList.add('visible');
+      }, 200);
     });
 
     function moveSlide(direction, modalId) {
