@@ -1,0 +1,77 @@
+---
+const posts = Object.entries(import.meta.glob('../posts/*.md', { eager: true }))
+  .map(([path, post]) => {
+    const slug = path.split('/').pop().replace(/\.md$/, '');
+    return {
+      slug,
+      ...post.frontmatter,
+      Content: post.default,
+    };
+  })
+  .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+---
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog · Filmujesobie</title>
+    <meta name="description" content="Blog o fotografii i filmach na stronie Filmujesobie." />
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #111;
+        color: #fff;
+      }
+      .wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+      a {
+        color: #ffcc66;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .post-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .post-item {
+        border: 1px solid rgba(255,255,255,0.12);
+        padding: 1.6rem;
+        margin-bottom: 1rem;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.03);
+      }
+      .post-item h2 {
+        margin: 0 0 0.35rem;
+      }
+      .post-item time {
+        display: block;
+        color: #aaa;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p><a href="/">← Wróć do strony głównej</a></p>
+      <h1>Blog @Filmujesobie</h1>
+      <p>Aktualności i refleksje o fotografii, filmowaniu i realizacji projektów w świecie motoryzacji.</p>
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li class="post-item">
+            <h2><a href={`/blog/${post.slug}/`}>{post.title}</a></h2>
+            <time dateTime={post.pubDate}>{post.pubDate}</time>
+            <p>{post.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </body>
+</html>
