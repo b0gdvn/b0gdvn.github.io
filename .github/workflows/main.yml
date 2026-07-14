@@ -1,0 +1,45 @@
+name: Build and publish Astro blog
+on:
+  push:
+    paths:
+      - 'astro-blog/**'
+      - '.github/workflows/build-blog.yml'
+jobs:
+  build-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install deps
+        run: npm ci
+        working-directory: astro-blog
+
+      - name: Build blog
+        run: npm run build
+        working-directory: astro-blog
+
+      - name: Ensure blog dir exists and copy output
+        run: |
+          mkdir -p blog
+          if [ -d blog ]; then rm -rf blog/* || true; fi
+          # adjust sources below if your build outputs to a different path
+          if [ -d astro-blog/dist ]; then cp -a astro-blog/dist/. blog/; fi
+          if [ -d blog ] && [ -z "$(ls -A blog)" ]; then echo "Warning: blog/ is empty after build"; fi
+
+      - name: Commit built blog to repo
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions
+          author_email: github-actions@github.com
+          message: "ci: build blog (auto)"
+          add: 'blog'
+          branch: ${{ github.ref_name }}
+          push: true
