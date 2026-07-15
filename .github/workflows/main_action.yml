@@ -1,0 +1,47 @@
+name: Build and publish Astro-blog
+on:
+  push:
+    paths:
+      - 'astro-blog/**'
+      - '.github/workflows/main.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm ci
+        working-directory: astro-blog
+
+      - name: Build blog
+        run: npm run build
+        working-directory: astro-blog
+
+      - name: Verify build output
+        run: |
+          test -d blog
+          find blog -maxdepth 2 -type f | sort | sed -n '1,20p'
+
+      - name: Commit built blog to repo
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions
+          author_email: github-actions@github.com
+          message: "ci: build blog (auto)"
+          add: 'blog'
+          branch: ${{ github.ref_name }}
+          push: true
