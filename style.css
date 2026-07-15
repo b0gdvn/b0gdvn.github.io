@@ -202,6 +202,12 @@ body {
   font-size: 24.5vw;
 }
 
+.bigtext-clients {
+  position: inherit;
+  font-size: 15.5vw;
+  padding-bottom: 1rem;
+}
+
 .bigtext-films {
   font-size: 17vw;
   line-height: 0.95;
@@ -419,6 +425,37 @@ body {
   letter-spacing: -.05rem;
 }
 
+/* Clients Logos */
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.logo-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-grid img {
+    max-width: 120px;
+    
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    display: block;
+}
+
+.logo-grid img:hover {
+    opacity: 1;
+}
+
 /* CONTACT 
 ------------------------- */
 
@@ -553,6 +590,10 @@ button[type="submit"]:disabled:hover {
   .bigtext-about {
     font-size: 8.8em;
   }
+
+  .bigtext-clients {
+    font-size: 6em
+  }
   
   .bigtext-films {
     font-size: 6em;
@@ -588,6 +629,10 @@ button[type="submit"]:disabled:hover {
     font-size: 12em;
   }
 
+  .bigtext-clients {
+    font-size: 8em
+  }
+
   .bigtext-films {
     font-size: 8em;
   }
@@ -603,6 +648,14 @@ button[type="submit"]:disabled:hover {
     text-align: right;
   }
 
+  .logo-grid {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 32px;
+  }
+
+  .logo-grid img {
+      max-width: 140px;
+  }
 }
 /* lg */
 @media (min-width: 992px) {
@@ -639,6 +692,15 @@ button[type="submit"]:disabled:hover {
     white-space: nowrap;
     line-height: 0.8;
     position: absolute;
+  }
+
+  .bigtext-clients {
+    font-size: 17vw;
+    right: 0;
+    margin-right: 30px;
+    white-space: nowrap;
+    line-height: 0.8;
+    padding-bottom: 5rem;
   }
   
   .bigtext-films {
@@ -736,3 +798,4 @@ button[type="submit"]:disabled:hover {
     font-size: 4em;
   }
 }
+
