@@ -121,9 +121,7 @@ Inne ustawienia będą odpowiednie dla Instagrama, inne dla YouTube, a jeszcze i
 
 ### Podsumowanie
 
-Patrząc na gotową reklamę, łatwo odnieść wrażenie, że cała praca polegała na kilku godzinach spędzonych z kamerą.
-
-W rzeczywistości nagrania są jedynie środkiem całego procesu. To przygotowania, planowanie i przemyślana koncepcja mają największy wpływ na końcowy efekt.
+Patrząc na gotową reklamę, łatwo odnieść wrażenie, że cała praca polegała na kilku godzinach spędzonych z kamerą. W rzeczywistości nagrania są jedynie środkiem całego procesu. To przygotowania, planowanie i przemyślana koncepcja mają największy wpływ na końcowy efekt.
 
 Dlatego profesjonalna produkcja reklamowa zaczyna się na długo przed pierwszym ujęciem. Im więcej czasu poświęcimy na przygotowanie, tym sprawniej przebiegają nagrania i tym lepszy film trafia ostatecznie do odbiorców.
 
