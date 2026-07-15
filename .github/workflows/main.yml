@@ -3,7 +3,12 @@ on:
   push:
     paths:
       - 'astro-blog/**'
-      - '.github/workflows/build-blog.yml'
+      - '.github/workflows/main.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   build-blog:
     runs-on: ubuntu-latest
@@ -16,7 +21,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install deps
         run: npm ci
@@ -26,13 +31,10 @@ jobs:
         run: npm run build
         working-directory: astro-blog
 
-      - name: Ensure blog dir exists and copy output
+      - name: Verify build output
         run: |
-          mkdir -p blog
-          if [ -d blog ]; then rm -rf blog/* || true; fi
-          # adjust sources below if your build outputs to a different path
-          if [ -d astro-blog/dist ]; then cp -a astro-blog/dist/. blog/; fi
-          if [ -d blog ] && [ -z "$(ls -A blog)" ]; then echo "Warning: blog/ is empty after build"; fi
+          test -d blog
+          find blog -maxdepth 2 -type f | sort | sed -n '1,20p'
 
       - name: Commit built blog to repo
         uses: EndBug/add-and-commit@v9
