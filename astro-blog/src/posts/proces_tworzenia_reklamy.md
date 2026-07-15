@@ -16,7 +16,7 @@ Na tym etapie ustalamy między innymi:
 
 * cel filmu,
 * grupę odbiorców,
-* miejsce publikacji (Instagram, YouTube, kino, telewizja, strona internetowa),
+* miejsce publikacji (Social Media, YouTube, kino, telewizja, strona internetowa),
 * długość materiału,
 * najważniejsze elementy, które muszą znaleźć się w reklamie,
 * styl i charakter filmu.
