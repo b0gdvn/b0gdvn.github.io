@@ -49,9 +49,10 @@
 
 <main>
   <div class="intro">
-    <h1 id="mainText" class="mainText">FOTOGRAFIA I FILMY</h1>
-    <p id="subText" class="subText">Tworzone we współpracy z firmami z branży motoryzacyjnej,<br> które przyciągają uwagę i napędzają sprzedaż.</p>
-    <img id="porsche" class="porsche" src="porsche_darkness.png">
+    <video class="intro-video" autoplay loop muted playsinline aria-hidden="true">
+      <source src="showreel.mp4" type="video/mp4">
+    </video>
+    <img class="intro-logo" src="logo_fs.png" alt="FILMUJESOBIE">
   </div>
 
   <div id="mojezdjecia-text" class="midtext text-center mojezdjecia-text">
@@ -361,7 +362,7 @@
   <div class="about px-0 mx-0 py-5 mt-5">
     <div class="container overflow-visible">
       <a id="omnie" class="scrollitem"></a>
-      <div class="row px-0 mx-0 pb-5 justify-content-center text-right">
+      <div class="row px-0 mx-0 justify-content-center text-right">
         <div class="col-lg-4 d-flex px-0 order-lg-2 justify-content-center">
           <img src="me.jpg" class="me-photo rounded-me img-fluid" alt="Photo of myself">
         </div>
@@ -379,31 +380,44 @@
     </div>
   </div>
 
-  <div class="clients px-0 mx-0 py-5 mt-5">
+  <div class="clients px-0 mx-0 py-5">
     <div class="container overflow-visible">
       <a id="wspolprace" class="scrollitem"></a>
-      <div class="row px-0 mx-0 pb-5 justify-content-center">
+      <div class="px-0 mx-0 pb-5">
         <div class="bigtext bigtext-clients mt-0">
           Zaufali mi:
         </div>
-        <div class="logo-grid">
-          <a href="https://www.instagram.com/reel/DY47_VbNIOK/?igsh=MTBjZWZubjQ3dzZvcg=="><img src="logos/bmw.png" alt="Logo BMW"></a>
-          <a href="https://www.instagram.com/p/DQuYEP7DUiS/?igsh=N3hjNjdmZ3EydXkz"><img src="logos/cupra.png" alt="Logo Cupra"></a>
-          <a href="https://www.instagram.com/p/DQyd18BDAJO/?igsh=cDg3Y240MGYxb2g3"><img src="logos/helriders.png" alt="Logo HR"></a>
-          <a href="https://www.instagram.com/p/DOqEo4VDGJT/?igsh=NTk0NnlqaHIyenZj"><img src="logos/lexus.png" alt="Logo Lexus"></a>
-          <a href="https://www.instagram.com/reel/DNUo2p4smNd/?igsh=MWVtNXN3bXh4OGZkdQ=="><img src="logos/toyota.png" alt="Logo Toyota"></a>
-          <a href="https://www.instagram.com/reel/DRUWdZrDa3t/?igsh=YXBxN2F1bHNtaWRy"><img src="logos/gr8.png" alt="Logo GR8"></a>
-
-          <a href="https://www.instagram.com/reel/DYnLa8RRrqC/?igsh=MWRiMW8wM2F6cWRscg=="><img src="logos/renault.png" alt="Logo Renault"></a>
-          <a href="https://www.instagram.com/reel/DaAdBB-Me0P/?igsh=amE2bHlreHNpb2Fk"><img src="logos/vw.png" alt="Logo VW"></a>
-          <a href="https://www.instagram.com/reel/DUWDD0aDcfZ/?igsh=MThwaDRqenp3eGpxcA=="><img src="logos/chlodzeni_powietrzem.png" alt="Logo Chlodzeni Powietrzem"></a>
-          <a href="https://www.instagram.com/p/DaKg4fJDJAo/?igsh=MTZuMjFjZmhobWduYg=="><img src="logos/rcr.png" alt="Logo RCR"></a>
-          <a href="https://www.instagram.com/reel/DZapTgVINLQ/?igsh=MWppbWg5NmN3NG8wMQ=="><img src="logos/dacia.png" alt="Logo Dacia"></a>
-          <a href="https://www.instagram.com/reel/DTfz4OLDYqs/?igsh=MTRpZ3hobDJjM3ByMA=="><img src="logos/motorrad.png" alt="Logo BMW Motorrad"></a>
+        <div class="logo-marquee">
+          <div class="logo-track">
+            <div class="logo-grid">
+              <a href="https://www.instagram.com/reel/DY47_VbNIOK/?igsh=MTBjZWZubjQ3dzZvcg=="><img src="logos/bmw.png" alt="Logo BMW"></a>
+              <a href="https://www.instagram.com/p/DQuYEP7DUiS/?igsh=N3hjNjdmZ3EydXkz"><img src="logos/cupra.png" alt="Logo Cupra"></a>
+              <a href="https://www.instagram.com/p/DQyd18BDAJO/?igsh=cDg3Y240MGYxb2g3"><img src="logos/helriders.png" alt="Logo HR"></a>
+              <a href="https://www.instagram.com/p/DOqEo4VDGJT/?igsh=NTk0NnlqaHIyenZj"><img src="logos/lexus.png" alt="Logo Lexus"></a>
+              <a href="https://www.instagram.com/reel/DNUo2p4smNd/?igsh=MWVtNXN3bXh4OGZkdQ=="><img src="logos/toyota.png" alt="Logo Toyota"></a>
+              <a href="https://www.instagram.com/reel/DRUWdZrDa3t/?igsh=YXBxN2F1bHNtaWRy"><img src="logos/gr8.png" alt="Logo GR8"></a>
+              <a href="https://www.instagram.com/reel/DYnLa8RRrqC/?igsh=MWRiMW8wM2F6cWRscg=="><img src="logos/renault.png" alt="Logo Renault"></a>
+              <a href="https://www.instagram.com/reel/DaAdBB-Me0P/?igsh=amE2bHlreHNpb2Fk"><img src="logos/vw.png" alt="Logo VW"></a>
+              <a href="https://www.instagram.com/reel/DUWDD0aDcfZ/?igsh=MThwaDRqenp3eGpxcA=="><img src="logos/chlodzeni_powietrzem.png" alt="Logo Chlodzeni Powietrzem"></a>
+              <a href="https://www.instagram.com/p/DaKg4fJDJAo/?igsh=MTZuMjFjZmhobWduYg=="><img src="logos/rcr.png" alt="Logo RCR"></a>
+              <a href="https://www.instagram.com/reel/DZapTgVINLQ/?igsh=MWppbWg5NmN3NG8wMQ=="><img src="logos/dacia.png" alt="Logo Dacia"></a>
+              <a href="https://www.instagram.com/reel/DTfz4OLDYqs/?igsh=MTRpZ3hobDJjM3ByMA=="><img src="logos/motorrad.png" alt="Logo BMW Motorrad"></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    const logoTrack = document.querySelector('.logo-track');
+    const logoGrid = logoTrack.querySelector('.logo-grid');
+    const logoClone = logoGrid.cloneNode(true);
+    logoClone.setAttribute('aria-hidden', 'true');
+    logoClone.querySelectorAll('a').forEach(link => link.setAttribute('tabindex', '-1'));
+    logoTrack.append(logoClone);
+    logoTrack.classList.add('logo-track-animated');
+  </script>
 
   <div class="container contact">
     <a id="kontakt" class="scrollitem mt-4"></a>
@@ -450,11 +464,9 @@
               if (!navbarCollapsible) {
                   return;
               }
-              if (window.scrollY < 500) {
-                  navbarCollapsible.classList.remove('navbar-shrink')
-              } else {
-                  navbarCollapsible.classList.add('navbar-shrink')
-              }
+              const isScrolled = window.scrollY >= 500;
+              navbarCollapsible.classList.toggle('navbar-shrink', isScrolled);
+              document.querySelector('.intro-logo')?.classList.toggle('intro-logo-hidden', isScrolled);
           };
           // Shrink the navbar 
           navbarShrink();
@@ -572,30 +584,8 @@
     });
 
     // INTRO ANIMATION (separate from observer)
-    const porsche = document.getElementById('porsche');
-    const mainText = document.getElementById('mainText');
-    const subText = document.getElementById('subText');
-    const navbar = document.getElementById('mainNav');
     const photos = document.getElementById('mojezdjecia-text');
 
-    // Ensure Porsche image starts hidden for animation
-    porsche.style.opacity = '0';
-    porsche.style.transform = 'translateY(20px)';
-    porsche.style.transition = 'opacity 1s ease, transform 1s ease';
-
-    setTimeout(() => {
-      porsche.classList.add('visible');
-      // Remove inline style after animation to allow CSS hover etc.
-      setTimeout(() => {
-      porsche.style.opacity = '';
-      porsche.style.transform = '';
-      porsche.style.transition = '';
-      }, 100);
-    }, 100);
-
-    setTimeout(() => mainText.classList.add('visible'), 1000);
-    setTimeout(() => subText.classList.add('visible'), 1200);
-    setTimeout(() => navbar.classList.add('visible'), 2300);
     setTimeout(() => photos.classList.add('visible'), 2500);
 
     // SCROLL FADE LOGIC FOR OTHER SECTIONS
